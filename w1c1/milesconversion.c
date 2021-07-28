@@ -25,21 +25,21 @@ int main() {
     printf("This program converts from miles to kilometers(or meters).\n");
 
     //get user input
-    printf("Enter a distance in miles >");
+    printf("Enter a distance in miles ");
     scanf("%lf", &miles);
 
-if (km>1) {
+if (miles > 0.62) {
     // calculate the distance in km
-    kilometers = convert_miles_to_km(miles);
+    kilometers = convert_miles_to_metric(miles);
     
     // output the result
-    printf("%lfC == %lfF\n", mi, km);
+    printf("%lfmi == %lfkm\n", miles, kilometers);
 } else {
     // calculate the distance in km
-    meters = convert_miles_to_km(miles) * 1000;
+    meters = convert_miles_to_metric(miles) * 1000;
     
     // output the result
-    printf("%lfC == %lfF\n", mi, m);
+    printf("%lfmi == %lfm\n", miles, meters);
 }
     return(0);
 }
