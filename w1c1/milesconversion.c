@@ -13,17 +13,13 @@
  * return:
  *      float - the distance in km or m
  */
-float convert_miles_to_km(float mi)
-if (km > 1) {
-    float km = (mi * 1.609)
-    return km;
-} else {
-    float m = (mi * 1.609)/1000;
-    return m; 
+float convert_miles_to_metric(float mi) {
+    float km = (mi * 1.609);
+    return km; 
 }
 
 int main() {
-    double kilometers, miles;
+    double miles, kilometers, meters;
 
     //print out user information
     printf("This program converts from miles to kilometers(or meters).\n");
@@ -32,11 +28,18 @@ int main() {
     printf("Enter a distance in miles >");
     scanf("%lf", &miles);
 
+if (km>1) {
     // calculate the distance in km
     kilometers = convert_miles_to_km(miles);
     
     // output the result
-    printf("%lfC == %lfF\n", miles, km);
-
+    printf("%lfC == %lfF\n", mi, km);
+} else {
+    // calculate the distance in km
+    meters = convert_miles_to_km(miles) * 1000;
+    
+    // output the result
+    printf("%lfC == %lfF\n", mi, m);
+}
     return(0);
 }
